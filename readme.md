@@ -1,8 +1,10 @@
-## Keycloak Admin Client for NestJs
+## Keycloak Admin Client for NestJs based on [nestjs-keycloak-admin](https://github.com/anonrig/nestjs-keycloak-admin)
 
-Install using `npm i --save nestjs-keycloak-admin` or `yarn add nestjs-keycloak-admin`
+Install using `npm i --save @chongyejia/nestjs-keycloak-admin` or `yarn add @chongyejia/nestjs-keycloak-admin`
 
+### Supported Keycloak version
 
+- 18.0.0
 ## Initialize KeycloakModule
 
 Then on your app.module.ts
@@ -10,7 +12,7 @@ Then on your app.module.ts
 ```typescript
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import KeycloakModule, { AuthGuard, ResourceGuard, RoleGuard } from 'nestjs-keycloak-admin'
+import KeycloakModule, { AuthGuard, ResourceGuard, RoleGuard } from '@chongyejia/nestjs-keycloak-admin'
 import { APP_GUARD } from '@nestjs/core';
 
 @Module({
@@ -40,7 +42,7 @@ export class AppModule {}
 
 ### Resource Management using User Managed Access (UMA)
 
-By default nestjs-keycloak-admin supports User Managed Access for managing your resources.
+By default @chongyejia/nestjs-keycloak-admin supports User Managed Access for managing your resources.
 
 ```typescript
 import { Controller, Get, Request, ExecutionContext, Post } from '@nestjs/common'
@@ -54,7 +56,7 @@ import {
   DefineResourceEnforcer,
   UMAResource,
   Scope,
-} from 'nestjs-keycloak-admin'
+} from '@chongyejia/nestjs-keycloak-admin'
 
 @Controller('/organization')
 @DefineResource('organization')
@@ -132,3 +134,12 @@ Here is the decorators you can use in your controllers.
   }
 
 ```
+
+
+## Contributors
+
+* luban ([xyezir](https://github.com/xyezir))
+
+## Bugs and Contributions
+
+If you find a bug, please report it using the [issue tracker](https://github.com/chongyejia/nestjs-keycloak-admin/issues).

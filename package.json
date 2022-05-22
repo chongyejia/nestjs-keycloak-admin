@@ -1,8 +1,8 @@
 {
-  "name": "nestjs-keycloak-admin",
-  "version": "1.7.5",
+  "name": "@chongyejia/nestjs-keycloak-admin",
+  "version": "1.0.0",
   "description": "Keycloak Admin Provider for Nest.js",
-  "author": "Yagiz Nizipli <yagiz@nizipli.com>",
+  "author": "Luban <xyezir@gmail.com>",
   "license": "MIT",
   "readmeFilename": "README.md",
   "main": "dist/main/index.js",
@@ -45,10 +45,11 @@
     "rxjs": "^7.5.2"
   },
   "dependencies": {
-    "@keycloak/keycloak-admin-client": "^16.1.1",
-    "axios": "^0.26.1",
-    "keycloak-connect": "^16.1.1",
-    "openid-client": "^5.1.5"
+    "@keycloak/keycloak-admin-client": "^18.0.0",
+    "axios": "^0.27.2",
+    "keycloak-connect": "^18.0.0",
+    "openid-client": "^5.1.6",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",

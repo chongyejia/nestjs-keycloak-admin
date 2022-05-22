@@ -31,7 +31,7 @@ export class ResourceGuard implements CanActivate {
   constructor(
     @Inject(KeycloakService)
     private keycloak: KeycloakService,
-    private readonly reflector: Reflector
+    @Inject(Reflector.name) private readonly reflector: Reflector
   ) {}
 
   getRequest(context: ExecutionContext): any {

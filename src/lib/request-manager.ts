@@ -31,22 +31,26 @@ export class RequestManager {
   }
 
   async get<T>(...args: [string, (AxiosRequestConfig | undefined)?]): Promise<AxiosResponse<T>> {
+    console.log(args, "get")
     return this.requester.get.apply<any, any, Promise<AxiosResponse<T>>>(null, args)
   }
 
   async post<T>(
     ...args: [string, any?, (AxiosRequestConfig | undefined)?]
   ): Promise<AxiosResponse<T>> {
+    console.log(args, "post")
     return this.requester.post.apply<any, any, Promise<AxiosResponse<T>>>(null, args)
   }
 
   async put<T>(
     ...args: [string, unknown?, (AxiosRequestConfig | undefined)?]
   ): Promise<AxiosResponse<T>> {
+    console.log(args, "put")
     return this.requester.put.apply<any, any, Promise<AxiosResponse<T>>>(null, args)
   }
 
   async delete<T>(...args: [string, (AxiosRequestConfig | undefined)?]): Promise<AxiosResponse<T>> {
+    console.log(args, "del")
     return this.requester.delete.apply<any, any, Promise<AxiosResponse<T>>>(null, args)
   }
 }
